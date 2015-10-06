@@ -1,0 +1,28 @@
+# vim: set syntax=yaml ts=2 sw=2 sts=2 et :
+
+name:          template-formula
+top_level_dir: template
+saltenv:       base
+version:       3.0.0
+release:       1
+os:            RedHat, Debian, Ubuntu, Suse, FreeBSD
+os_family:     RedHat, Debian, Suse, FreeBSD
+summary:       Formula description
+description: |
+  Formula description.
+
+state-tops:
+  base:
+    enable:
+      - template
+  test:
+    enable:
+      - template
+  
+pillar-tops:
+  base:
+    enable:
+      - template
+  test:
+    enable:
+      - template

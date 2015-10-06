@@ -1,6 +1,7 @@
 ifndef LOADING_PLUGINS
     ifeq ($(PACKAGE_SET),dom0)
-        RPM_SPEC_FILES := rpm_spec/qubes-mgmt-salt-template
+        RPM_SPEC_FILES := rpm_spec/qubes-mgmt-salt-template.spec
+        RPM_BUILD_DEFINES += --define "_verbose $(VERBOSE)"
 
     else ifeq ($(PACKAGE_SET),vm)
         ifneq ($(filter $(DISTRIBUTION), debian qubuntu),)
@@ -8,7 +9,8 @@ ifndef LOADING_PLUGINS
             SOURCE_COPY_IN := source-debian-mgmt-salt-template-in
         endif
 
-        RPM_SPEC_FILES := rpm_spec/qubes-mgmt-salt-template
+        RPM_SPEC_FILES := rpm_spec/qubes-mgmt-salt-template.spec
+        RPM_BUILD_DEFINES += --define "_verbose $(VERBOSE)"
     endif
 
     source-debian-mgmt-salt-template-in: VERSION = $(shell $(DEBIAN_PARSER) changelog --package-version $(ORIG_SRC)/$(DEBIAN_BUILD_DIRS)/changelog)
