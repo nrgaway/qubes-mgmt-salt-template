@@ -1,0 +1,4 @@
+/srv/pillar/base/template/init.sls
+/srv/pillar/base/template/init.top
+/srv/pillar/test/template/init.sls
+/srv/pillar/test/template/init.top
