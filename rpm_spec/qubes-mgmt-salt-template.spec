@@ -58,6 +58,7 @@ qubesctl top.enable %{state_name} saltenv=%{saltenv} pillar=true -l quiet --out 
 
 %files
 %defattr(-,root,root)
+%doc LICENSE README.rst
 %attr(750, root, root) %dir /srv/formulas/base/template-formula
 /srv/formulas/base/template-formula/LICENSE
 /srv/formulas/base/template-formula/README.rst
