@@ -8,7 +8,7 @@ name:               template-formula
 top_level_dir:      template
 formula-files:      template
 pillar-files:       pillar
-test-formula-files: README.rst LICENSE tests
+test-formula-files: README.rst LICENSE tests/template
 test-pillar-files:  tests/pillar
 formula_dir:        $(MGMT_DEFAULT_STATE_DIR)
 pillar_dir:         $(MGMT_DEFAULT_PILLAR_DIR)/$(MGMT_SALTENV)

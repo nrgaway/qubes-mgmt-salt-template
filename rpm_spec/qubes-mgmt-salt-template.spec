@@ -1,6 +1,6 @@
 %{!?version: %define version %(cat version)}
 
-Name       qubes-mgmt-salt-template
+Name:      qubes-mgmt-salt-template
 Version:   %{version}
 Release:   1%{?dist}
 Summary:   Formula description
@@ -49,19 +49,17 @@ qubesctl top.enable template saltenv=base pillar=true -l quiet --out quiet > /de
 %files
 %defattr(-,root,root)
 %doc LICENSE README.rst
-%attr(750, root, root) %dir /srv/formulas/base/template-formula
-/srv/formulas/base/template-formula/LICENSE
-/srv/formulas/base/template-formula/README.rst
-/srv/formulas/base/template-formula/template/init.sls
-/srv/formulas/base/template-formula/template/init.top
+%attr(750, root, root) %dir /srv/salt/template
+/srv/salt/template/init.sls
+/srv/salt/template/init.top
+/srv/salt/template/LICENSE
+/srv/salt/template/README.rst
 
-%attr(750, root, root) %dir /srv/formulas/test/template-formula/template
+%attr(750, root, root) %dir /srv/formulas/test/template-formula
 /srv/formulas/test/template-formula/LICENSE
 /srv/formulas/test/template-formula/README.rst
 /srv/formulas/test/template-formula/template/init.sls
 /srv/formulas/test/template-formula/template/init.top
-/srv/formulas/test/template-formula/template/pillar/template/init.sls
-/srv/formulas/test/template-formula/template/pillar/template/init.top
 
 %attr(750, root, root) %dir /srv/pillar/base/template
 %config(noreplace) /srv/pillar/base/template/init.sls
